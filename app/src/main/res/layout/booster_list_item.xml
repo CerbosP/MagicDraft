@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/tv_booster_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="3"
+            android:paddingTop="10dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Civic Gardener" />
+
+        <TextView
+            android:id="@+id/tv_rarity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_booster_name"
+            tools:text="Uncommon" />
+
+        <ImageView
+            android:id="@+id/iv_identity_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_identity_two"
+            app:layout_constraintTop_toBottomOf="@id/tv_rarity"/>
+
+        <ImageView
+            android:id="@+id/iv_identity_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/g"
+            app:layout_constraintStart_toEndOf="@id/iv_identity_one"
+            app:layout_constraintEnd_toStartOf="@id/iv_identity_three"
+            app:layout_constraintTop_toBottomOf="@id/tv_rarity"/>
+
+        <ImageView
+            android:id="@+id/iv_identity_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/r"
+            app:layout_constraintStart_toEndOf="@id/iv_identity_two"
+            app:layout_constraintEnd_toStartOf="@id/iv_identity_four"
+            app:layout_constraintTop_toBottomOf="@id/tv_rarity"/>
+
+        <ImageView
+            android:id="@+id/iv_identity_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/u"
+            app:layout_constraintStart_toEndOf="@id/iv_identity_three"
+            app:layout_constraintEnd_toStartOf="@id/iv_identity_five"
+            app:layout_constraintTop_toBottomOf="@id/tv_rarity"/>
+
+        <ImageView
+            android:id="@+id/iv_identity_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/w"
+            app:layout_constraintStart_toEndOf="@id/iv_identity_four"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rarity"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

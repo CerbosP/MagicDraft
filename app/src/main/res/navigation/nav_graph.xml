@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_start_screen">
+
+    <fragment
+        android:id="@+id/nav_start_screen"
+        android:name="com.example.magicdraft.view.fragment.StartScreenFragment">
+
+        <action
+            android:id="@+id/action_start_to_set_list"
+            app:destination="@id/nav_set_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_set_list"
+        android:name="com.example.magicdraft.view.fragment.SetListFragment">
+
+        <action
+            android:id="@+id/action_set_list_to_booster_pack"
+            app:destination="@id/nav_booster_pack" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_booster_pack"
+        android:name="com.example.magicdraft.view.fragment.BoosterPackFragment">
+
+        <action
+            android:id="@+id/action_booster_pack_to_card"
+            app:destination="@id/nav_card_detail" />
+
+        <argument
+            android:name="set_code"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_card_detail"
+        android:name="com.example.magicdraft.view.fragment.CardDetailFragment">
+
+        <argument
+            android:name="card_url"
+            app:argType="string"/>
+    </fragment>
+
+</navigation>
