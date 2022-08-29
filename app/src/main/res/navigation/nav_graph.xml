@@ -11,6 +11,10 @@
         <action
             android:id="@+id/action_start_to_set_list"
             app:destination="@id/nav_set_list" />
+
+        <action
+            android:id="@+id/action_start_to_card_search"
+            app:destination="@id/nav_card_search" />
     </fragment>
 
     <fragment
@@ -20,6 +24,15 @@
         <action
             android:id="@+id/action_set_list_to_booster_pack"
             app:destination="@id/nav_booster_pack" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_card_search"
+        android:name="com.example.magicdraft.view.fragment.CardSearchFragment">
+
+        <action
+            android:id="@+id/action_card_search_to_card_detail"
+            app:destination="@id/nav_card_detail" />
     </fragment>
 
     <fragment
@@ -39,8 +52,34 @@
         android:id="@+id/nav_card_detail"
         android:name="com.example.magicdraft.view.fragment.CardDetailFragment">
 
+        <action
+            android:id="@+id/action_card_detail_to_ability_detail"
+            app:destination="@id/nav_ability_detail"/>
+
         <argument
-            android:name="card_url"
+            android:name="card"
+            app:argType="com.example.magicdraft.model.response.Card"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
+        <argument
+            android:name="card_name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null"/>
+
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="1"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ability_detail"
+        android:name="com.example.magicdraft.view.fragment.AbilityDetailFragment">
+
+        <argument
+            android:name="ability"
             app:argType="string"/>
     </fragment>
 

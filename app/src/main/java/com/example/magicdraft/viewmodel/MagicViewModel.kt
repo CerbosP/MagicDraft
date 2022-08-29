@@ -11,6 +11,7 @@ import com.example.magicdraft.model.states.UIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.plus
 import javax.inject.Inject
@@ -43,8 +44,15 @@ class MagicViewModel @Inject constructor(
     private val _boosterPack = MutableLiveData<UIState>()
     val boosterPack: LiveData<UIState> get() = _boosterPack
 
+    private val _cardList = MutableLiveData<UIState>()
+    val cardList: LiveData<UIState> get() = _cardList
+
+    private val _cardInfo = MutableLiveData<UIState>()
+    val cardInfo: LiveData<UIState> get() = _cardInfo
+
     fun setSetLoading() { _setList.value = UIState.Loading }
     fun setBoosterLoading() { _boosterPack.value = UIState.Loading }
+    fun setCardLoading() { _cardInfo.value = UIState.Loading }
 
     fun getSets() {
         viewModelSafeScope.launch (dispatcher) {
@@ -58,6 +66,22 @@ class MagicViewModel @Inject constructor(
         viewModelSafeScope.launch (dispatcher) {
             repository.drawBooster(set).collect {
                 _boosterPack.postValue(it)
+            }
+        }
+    }
+
+    fun findCard(name: String) {
+        viewModelSafeScope.launch (dispatcher) {
+            repository.findCard(name).collect {
+                _cardList.postValue(it)
+            }
+        }
+    }
+
+    fun retrieveCard(name: String) {
+        viewModelSafeScope.launch (dispatcher) {
+            repository.retrieveCard(name).collect {
+                _cardInfo.postValue(it)
             }
         }
     }

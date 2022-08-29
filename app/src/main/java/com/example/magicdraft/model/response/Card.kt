@@ -1,5 +1,9 @@
 package com.example.magicdraft.model.response
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Card(
     val name: String,
     val manaCost: String?,
@@ -7,9 +11,10 @@ data class Card(
     val colorIdentity: List<String>?,
     val type: String,
     val rarity: String,
-    val text: String,
+    val text: String?,
     val power: String?,
     val toughness: String?,
-    val imageUrl: String,
-    val legalities: List<Format>?
-)
+    val imageUrl: String?,
+    val legalities: List<Format>?,
+    val rulings: List<Rulings>?
+): Parcelable

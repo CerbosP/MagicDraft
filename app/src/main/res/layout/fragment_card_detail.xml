@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -30,15 +31,104 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <WebView
-        android:id="@+id/wv_card"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_max="265dp"
-        app:layout_constraintHeight_max="370dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/wv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_max="265dp"
+                app:layout_constraintHeight_max="370dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_card_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_max="265dp"
+                app:layout_constraintHeight_max="370dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_card_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="5dp"
+                tools:text="Flying\nWhenever a Dragon you control attacks, bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wv_card"
+                app:layout_constraintBottom_toTopOf="@id/tv_rules_list"/>
+
+            <TextView
+                android:id="@+id/tv_rules_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="5dp"
+                tools:text="Energy counters are a kind of counter that a player may have. They’re not associated with specific permanents. (Other kinds of counters that players may have include poison and experience.)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_rules_list"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_rules_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="5dp"
+                tools:text="Ruling:\t1 of 17"
+                app:layout_constraintStart_toEndOf="@id/ibtn_left"
+                app:layout_constraintEnd_toStartOf="@id/ibtn_right"
+                app:layout_constraintTop_toBottomOf="@id/tv_card_desc"
+                app:layout_constraintBottom_toTopOf="@id/tv_rules_text"/>
+
+            <ImageButton
+                android:id="@+id/ibtn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_rules_list"
+                app:layout_constraintTop_toTopOf="@id/tv_rules_list"
+                app:layout_constraintBottom_toBottomOf="@id/tv_rules_list"/>
+
+            <ImageButton
+                android:id="@+id/ibtn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_rules_list"
+                app:layout_constraintTop_toTopOf="@id/tv_rules_list"
+                app:layout_constraintBottom_toBottomOf="@id/tv_rules_list"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

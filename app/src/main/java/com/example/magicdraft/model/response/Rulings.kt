@@ -4,7 +4,6 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Format(
-    val format: String,
-    val legality: String
+data class Rulings(
+    val text: String
 ): Parcelable

@@ -32,6 +32,13 @@ class StartScreenFragment: MagicViewModelFragment() {
             )
         }
 
+        binding.btnSearch.setOnClickListener {
+            findNavController().navigate(
+                StartScreenFragmentDirections
+                    .actionStartToCardSearch()
+            )
+        }
+
         return binding.root
     }
 }
