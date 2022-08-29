@@ -1,3 +1,79 @@
 <resources>
     <string name="app_name">MagicDraft</string>
+
+    <string-array name="abilities">
+        <item>"Adapt"</item>
+        <item>"Afflict"</item>
+        <item>"Afterlife"</item>
+        <item>"Aftermath"</item>
+        <item>"Amass"</item>
+        <item>"Ascend"</item>
+        <item>"Bolster"</item>
+        <item>"Convoke"</item>
+        <item>"Crew"</item>
+        <item>"Cycling"</item>
+        <item>"Deathtouch"</item>
+        <item>"Defender"</item>
+        <item>"Double Strike"</item>
+        <item>"Exert"</item>
+        <item>"Explore"</item>
+        <item>"Fabricate"</item>
+        <item>"First Strike"</item>
+        <item>"Flash"</item>
+        <item>"Flying"</item>
+        <item>"Haste"</item>
+        <item>"Hexproof"</item>
+        <item>"Improvise"</item>
+        <item>"Indestructible"</item>
+        <item>"Lifelink"</item>
+        <item>"Menace"</item>
+        <item>"Mentor"</item>
+        <item>"Morph"</item>
+        <item>"Megamorph"</item>
+        <item>"Mutate"</item>
+        <item>"Prowess"</item>
+        <item>"Reach"</item>
+        <item>"Scry"</item>
+        <item>"Trample"</item>
+        <item>"Vigilance"</item>
+        <item>"Ward"</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>"If this creature has no +1/+1 counters on it, put X +1/+1 counter(s) on it."</item>
+        <item>"Whenever this creature becomes blocked, defending player loses X life."</item>
+        <item>"When this creature dies, create N 1/1 white and black Spirit creature token(s) with flying."</item>
+        <item>"Cast this spell only from your graveyard. Then exile it."</item>
+        <item>"Put X +1/+1 counters on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first."</item>
+        <item>"If you control ten or more permanents, you get the city’s blessing for the rest of the game."</item>
+        <item>"Choose a creature you control with the least toughness or tied for least toughness among creatures you control. Put X +1/+1 counters on that creature."</item>
+        <item>"Your creatures can help cast this spell. Each creature you tap while casting this spell pays for one colorless or one mana of that creature's color."</item>
+        <item>"Tap any number of other untapped creatures you control with total power X or greater: This permanent becomes an artifact creature until end of turn."</item>
+        <item>"Discard this card: Draw a card."</item>
+        <item>"Any amount of damage this deals to a creature is enough to destroy it."</item>
+        <item>"This creature can't attack."</item>
+        <item>"This creature deals both first-strike and regular combat damage."</item>
+        <item>"An exerted permanent won't untap during your next untap step."</item>
+        <item>"Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back on top or into your graveyard."</item>
+        <item>"When this permanent enters the battlefield, you may put X +1/+1 counters on it. If you don't, create N 1/1 colorless Servo artifact creature tokens."</item>
+        <item>"This creature deals combat damage before creatures without first strike."</item>
+        <item>"You may cast this spell any time you could cast an instant."</item>
+        <item>"This creature can't be blocked except by creatures with flying and/or reach."</item>
+        <item>"This creature can attack and tap as soon as it comes under your control."</item>
+        <item>"This permanent can't be the target of spells or abilities your opponents control."</item>
+        <item>"Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for one colorless."</item>
+        <item>"Damage and effects that say "destroy" don’t destroy this."</item>
+        <item>"Damage dealt by this creature also causes you to gain that much life."</item>
+        <item>"This creature can't be blocked except by two or more creatures."</item>
+        <item>"Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power."</item>
+        <item>"You may cast this face down as a 2/2 creature for three mana. Turn it face up any time for its morph cost."</item>
+        <item>"You may cast this card face down as a 2/2 creature for three mana. Turn it face up at any time for its megamorph cost and put a +1/+1 counter on it."</item>
+        <item>"If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it."</item>
+        <item>"Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn."</item>
+        <item>"This creature can block creatures with flying."</item>
+        <item>"Look at the top X cards of your library, then put any number of them on the bottom of your library and the rest on top in any order."</item>
+        <item>"This creature can deal excess combat damage to a player or planeswalker it's attacking."</item>
+        <item>"Attacking doesn't cause this creature to tap."</item>
+        <item>"Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays [cost]."</item>
+    </string-array>
 </resources>

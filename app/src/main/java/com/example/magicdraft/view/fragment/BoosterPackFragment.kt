@@ -52,7 +52,11 @@ class BoosterPackFragment: MagicViewModelFragment() {
                     binding.apply {
                         pbLoading.visibility = View.GONE
                         tvLoadingText.visibility = View.GONE
-                        boosterAdapter.setBoosterList((uiState.response as BoosterResponse).cards)
+                        (uiState.response as BoosterResponse).cards?.let {
+                            boosterAdapter.setBoosterList(
+                                it
+                            )
+                        }
                         rvBooster.adapter = boosterAdapter
                     }
                 }
@@ -63,7 +67,7 @@ class BoosterPackFragment: MagicViewModelFragment() {
     private fun openDetails(card: Card) {
         findNavController().navigate(
             BoosterPackFragmentDirections
-                .actionBoosterPackToCard(card.imageUrl)
+                .actionBoosterPackToCard().setCard(card).setType(1)
         )
     }
 }
